@@ -3,7 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.novoda:bintray-release:0.2.4'
+        classpath 'com.novoda:bintray-release:0.8.1'
     }
 }
 
@@ -12,7 +12,6 @@ apply plugin: 'bintray-release'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "21.1.2"
 
     defaultConfig {
         minSdkVersion 18
@@ -32,9 +31,11 @@ android {
 publish {
     groupId = 'net.ypresto.androidtranscoder'
     artifactId = 'android-transcoder'
-    version = '0.1.10-SNAPSHOT'
+    publishVersion = '0.1.10-SNAPSHOT'
     licences = ['Apache-2.0']
     website = 'https://github.com/ypresto/android-transcoder'
     autoPublish = false
     dryRun = false
+    desc = "Transcodes videos to streamable formats."
+    userOrg = "airtime"
 }
