@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 19
-    buildToolsVersion "19.1.0"
 
     defaultConfig {
         applicationId "net.ypresto.androidtranscoder.example"
@@ -20,6 +19,6 @@ android {
 }
 
 dependencies {
-    compile project(':lib')
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':lib')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
